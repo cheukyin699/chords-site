@@ -5,12 +5,23 @@
 layout: page
 ---
 
+<div id="song-app">
+  <button v-on:click="transposeUp()">Up</button>
+  <button v-on:click="transposeDown()">Down</button>
+  <song-render v-bind:chords="chords"
+               v-bind:lyrics="lyrics"
+               v-bind:song-key="key"></song-render>
+</div>
+
 <script>
 var dataLink = "/data/{{ page.dataLink }}";
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
 {% if site.environment == "dev" %}
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 {% else %}
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 {% endif %}
+
+<script src="/assets/js/song.js"></script>
