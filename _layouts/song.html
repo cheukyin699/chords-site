@@ -1,0 +1,16 @@
+---
+# A song must have the title (given), an author/group, the key which it is in,
+# and a link to the data file that stores everything.
+
+layout: page
+---
+
+<script>
+var dataLink = "/data/{{ page.dataLink }}";
+</script>
+
+{% if site.environment == "dev" %}
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+{% else %}
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+{% endif %}
