@@ -7,6 +7,6 @@ layout: default
 
 {% for page in site.pages %}
 {% if page.layout == "song" %}
-[{{ page.title }}]({{ page.url }})
+[{{ page.title }}]({{ page.url | relative_url }})
 {% endif %}
 {% endfor %}

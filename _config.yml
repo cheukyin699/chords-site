@@ -16,8 +16,8 @@
 title: 詩歌歌詞
 description: >- # this means to ignore newlines until "baseurl:"
     ~
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/chords-site" # the subpath of your site, e.g. /blog
+url: "/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
 
@@ -26,6 +26,7 @@ markdown: kramdown
 theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
+  - jekyll-relative-links
 # Environment either "dev" or something else
 environment: dev
 

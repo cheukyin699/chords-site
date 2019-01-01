@@ -14,14 +14,10 @@ layout: page
 </div>
 
 <script>
-var dataLink = "/data/{{ page.dataLink }}";
+var dataLink = "{{ page.dataLink | relative_url }}";
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
-{% if site.environment == "dev" %}
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-{% else %}
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-{% endif %}
 
-<script src="/assets/js/song.js"></script>
+<script src="{{ "/assets/js/song.js" | relative_url }}"></script>
